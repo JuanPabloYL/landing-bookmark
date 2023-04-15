@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,4 +16,14 @@ body {
 ::after,
 ::before {
   box-sizing: inherit;
+}
+
+.container {
+  max-width: min(90%, 120rem);
+  margin-inline: auto;
+}
+
+#root {
+  overflow-x: hidden;
+  height: 100vh;
 }

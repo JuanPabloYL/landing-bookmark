@@ -1,5 +1,13 @@
+import { Features, HeroSection, NavBar } from "./components";
+
 const App = () => {
-  return <h1 className="font-rubik">Landing page </h1>;
+  return (
+    <>
+      <NavBar />
+      <HeroSection />
+      <Features />
+    </>
+  );
 };
 
 export { App };
