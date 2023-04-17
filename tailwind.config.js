@@ -12,6 +12,9 @@ export default {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
       },
+      boxShadow: {
+        "2xl": "rgba(83, 104, 223,0.3) 0px 8px 24px",
+      },
     },
     screens: {
       xs: "375px",
