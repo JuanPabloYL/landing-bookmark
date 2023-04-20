@@ -4,6 +4,7 @@ import {
   Features,
   HeroSection,
   NavBar,
+  Questions,
 } from "./components";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Features />
       <BookMark />
       <Download />
+      <Questions />
     </>
   );
 };
