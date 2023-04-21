@@ -5,6 +5,7 @@ import {
   HeroSection,
   NavBar,
   Questions,
+  StayUptoDate,
 } from "./components";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <BookMark />
       <Download />
       <Questions />
+      <StayUptoDate />
     </>
   );
 };
