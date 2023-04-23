@@ -2,6 +2,7 @@ import {
   BookMark,
   Download,
   Features,
+  Footer,
   HeroSection,
   NavBar,
   Questions,
@@ -18,6 +19,7 @@ const App = () => {
       <Download />
       <Questions />
       <StayUptoDate />
+      <Footer />
     </>
   );
 };

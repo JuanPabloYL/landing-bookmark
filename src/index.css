@@ -35,12 +35,18 @@ body {
   height: 100vh;
 }
 
+.ion-container {
+  display: none;
+}
+
+.ion-container.active {
+  display: flex;
+}
+
 ion-icon[name="alert-circle-outline"] {
   position: absolute;
   top: 25%;
   color: red;
   right: 2%;
   font-size: 3rem;
-
-  display: none;
 }

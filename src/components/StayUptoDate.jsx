@@ -8,6 +8,7 @@ const StayUptoDate = () => {
   const email = useRef("");
   const small = useRef("");
   const inputContainer = useRef("");
+  const ionIcon = useRef("");
 
   const validateEmail = (email) => {
     return String(email)
@@ -24,16 +25,34 @@ const StayUptoDate = () => {
       small.current.classList.add(
         "bg-secondary",
         "text-white",
+        "text-left",
         "p-[1rem]",
         "absolute",
         "left-0",
         "right-0",
         "bottom-[-4rem]",
-        "rounded-md",
-        "inline-block"
+        "rounded-md"
       );
+      small.current.classList.remove("hidden");
       inputContainer.current.classList.add("mb-[3rem]");
+      ionIcon.current.classList.add("active");
+      return;
     }
+    email.current.classList.remove("border-2", "border-rose-500");
+    small.current.classList.remove(
+      "bg-secondary",
+      "text-white",
+      "text-left",
+      "p-[1rem]",
+      "absolute",
+      "left-0",
+      "right-0",
+      "bottom-[-4rem]",
+      "rounded-md"
+    );
+    small.current.classList.add("hidden");
+    inputContainer.current.classList.remove("mb-[3rem]");
+    ionIcon.current.classList.remove("active");
   };
 
   return (
@@ -46,15 +65,15 @@ const StayUptoDate = () => {
         </h2>
 
         <form
-          className="flex flex-col md:flex-row text-black"
+          className="flex flex-col sm:flex-row text-black sm:items-center sm:justify-center sm:gap-[2rem]"
           onSubmit={handleForm}
         >
           <div ref={inputContainer} className="relative">
             <input
               type="text"
               name="email"
-              placeholder="Enter your email adress"
-              className="py-[1.5rem] px-[1rem] rounded-md font-rubik focus:outline-none relative w-full"
+              placeholder="Enter your email address"
+              className="py-[1.5rem] px-[1rem] rounded-md font-rubik focus:outline-none relative w-full sm:w-[50rem]"
               value={form.email}
               onChange={(e) => setForm({ email: e.target.value })}
               ref={email}
@@ -62,13 +81,15 @@ const StayUptoDate = () => {
             <small ref={small} className="hidden">
               Whoops, make sure it's an email
             </small>
-            <ion-icon name="alert-circle-outline"></ion-icon>
+            <div ref={ionIcon} className="ion-container">
+              <ion-icon name="alert-circle-outline"></ion-icon>
+            </div>
           </div>
 
           <div>
             <button
               type="submit"
-              className="px-[2rem] py-[1.5rem] rounded-md  bg-secondary text-white w-full font-rubik mt-[2rem]"
+              className="px-[2rem] py-[1.5rem] rounded-md  bg-secondary text-white w-full font-rubik mt-[2rem] md:mt-0 sm:w-[20rem]"
             >
               Contact Us
             </button>

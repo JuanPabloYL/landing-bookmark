@@ -58,7 +58,7 @@ const NavBar = () => {
               <li className="">
                 <a
                   href="#"
-                  className="text-secondary tracking-widest duration-300  border-2 border-secondary py-2 px-[2rem] hover:shadow-md rounded "
+                  className="text-white tracking-widest duration-300 bg-secondary border-2 py-2 px-[2rem] hover:shadow-md hover:bg-white hover:text-secondary outline hover:outline-secondary rounded"
                 >
                   Login
                 </a>
